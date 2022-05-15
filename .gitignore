@@ -1,3 +1,8 @@
+# Repo
+downloaded_model/
+latest_silero_models.yml
+test_audio_youtube.m4a
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

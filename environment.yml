@@ -1,0 +1,31 @@
+# To use:
+#   $ conda env create -f environment.yml
+#   $ conda activate <name>
+name: machinelearnear-asr-clinical-biomedical-ehr
+dependencies:
+  - python=3.9
+  - pip
+  - nb_conda_kernels
+  - ipykernel
+  - ipywidgets
+  - gh
+  - ffmpeg
+  - libsndfile
+  - pip:
+    - streamlit
+    - gradio
+    - torch
+    - torchaudio
+    - transformers
+    - librosa
+    - thunder-speech
+    - pyctcdecode
+    - https://github.com/kpu/kenlm/archive/master.zip
+    - deepmultilingualpunctuation
+    - https://github.com/pyannote/pyannote-audio/archive/develop.zip  
+    - stanza
+    - youtube-dl
+    - fasttext-langdetect
+    - wget
+    - pyspellchecker
+    - autocorrect
