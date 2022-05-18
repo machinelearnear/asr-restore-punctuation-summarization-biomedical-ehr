@@ -12,6 +12,9 @@ Through this guide, you will learn how to do automatic speech recognition in you
 - [SPEECH RECOGNITION WITH WAV2VEC2](https://pytorch.org/tutorials/intermediate/speech_recognition_pipeline_tutorial.html)
 - [How to add timestamps to ASR output](https://github.com/huggingface/transformers/issues/11307)
 
+## Video Tutorial in YouTube
+[![Como hacer tu propia solución de dictado automático de informes médicos (+ repo)](https://img.youtube.com/vi/_0KGck2JU0w/0.jpg)](https://www.youtube.com/watch?v=_0KGck2JU0w)
+
 ## Requirements
 - [SageMaker Studio Lab](https://studiolab.sagemaker.aws/) account. See this [explainer video](https://www.youtube.com/watch?v=FUEIwAsrMP4) to learn more about this.
 - Python=3.9
@@ -72,6 +75,20 @@ doc = nlp(input_text)
 # print out all entities
 for ent in doc.entities:
     print(f'{ent.text}\t{ent.type}')
+```
+
+Summarisation example
+
+```python
+# model_name = "google/pegasus-large"
+model_name = "google/pegasus-xsum"
+# model_name = "csebuetnlp/mT5_multilingual_XLSum"
+# model_name = "sshleifer/distilbart-cnn-12-6"
+# model_name = 'ELiRF/NASES'
+from transformers import pipeline
+pipe = pipeline(model=model_name)
+summary = pipe(input_text,truncation=True)
+print(summary[0]['summary_text'])
 ```
 
 ## Keep reading
